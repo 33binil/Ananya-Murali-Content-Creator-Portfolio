@@ -21,7 +21,7 @@ export const siteContent = {
       'Creating clear, credible content that helps brands and newsrooms tell stories people trust.',
     cutoutPhoto: {
       // Swap null for an imported transparent PNG or path, e.g. '/assets/hero-cutout.png'
-      src: null,
+      src: '/images/ananya_murali.png',
       alt: 'Ananya Murali A T cutout portrait',
       placeholderLabel: 'Cutout photo',
     },
