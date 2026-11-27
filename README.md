@@ -1,11 +1,37 @@
-<div align="center">
+# Ananya Murali A T — Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Personal portfolio website built with Vite, React (plain JavaScript `.jsx`), Tailwind CSS, and `lucide-react`.
 
-  <h1>Built with AI Studio</h2>
+## Running Locally
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+```bash
+npm install
+npm run dev
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+Build for production:
 
-</div>
+```bash
+npm run build
+```
+
+## Updating Text & Replacing Placeholder Images
+
+All copy, links, metrics, and image paths live in **`src/data/content.js`**, so you never need to edit JSX to update content.
+
+To replace any placeholder with a real photo:
+1. Place your image files (e.g. `hero-cutout.png`, `portrait.jpg`, `full-length.png`, `work-1.jpg`) inside **`src/assets/`**.
+2. Import them at the top of `src/data/content.js` (or reference files in `public/`):
+   ```js
+   import heroCutout from '../assets/hero-cutout.png';
+   import portraitPhoto from '../assets/portrait.jpg';
+   ```
+3. Set the matching `src` field in `src/data/content.js` from `null` to your imported image:
+   ```js
+   cutoutPhoto: {
+     src: heroCutout,
+     alt: 'Ananya Murali A T cutout portrait',
+     placeholderLabel: 'Cutout photo',
+   },
+   ```
+4. For the Hero and Content Niches cutout slots, use transparent-background PNGs so the subject cleanly overlaps the background typography and list edges.
